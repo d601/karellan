@@ -32,11 +32,9 @@ int main()
 
     sprite.setPosition(sf::Vector2f(32, 32));
 
-    while (window.isOpen())
-    {
+    while (window.isOpen()) {
         sf::Event event;
-        while (window.pollEvent(event))
-        {
+        while (window.pollEvent(event)) {
             if (event.type == sf::Event::Closed)
                 window.close();
         }
