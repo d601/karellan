@@ -8,6 +8,7 @@ class Space {
     uint16_t* cells;
     public:
         Space(uint64_t width, uint64_t height, uint64_t depth);
+        ~Space();
 };
 
 #endif

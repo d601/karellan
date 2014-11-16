@@ -8,3 +8,8 @@ Space::Space(uint64_t width, uint64_t height, uint64_t depth)
     this->depth = depth;
     cells = new uint16_t[width * height * depth];
 }
+
+Space::~Space()
+{
+    delete[] cells;
+}
