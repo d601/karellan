@@ -2,11 +2,15 @@
 #include <stdlib.h>
 #include <SFML/Graphics.hpp>
 
-/* Copied right out of the SFML tutorial. */
+#include "Space.hpp"
+#include "SpaceViewer.hpp"
 
 int main()
 {
     sf::RenderWindow window(sf::VideoMode(1024, 768), "Karellan");
+
+    Space* space = new Space(16, 16, 1);
+    SpaceViewer* spaceViewer = new SpaceViewer(space);
 
     sf::Texture texture;
     if (!texture.create(64, 32)) {
@@ -43,6 +47,7 @@ int main()
     }
 
     delete pixels;
+    delete space;
 
     return 0;
 }

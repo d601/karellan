@@ -5,8 +5,8 @@ LIBS = -lsfml-graphics -lsfml-window -lsfml-system
 CXX = g++
 EXECUTABLE = Karellan
 
-all: main.o
-	$(CXX) main.o -o $(EXECUTABLE) $(LIBS)
+all: main.o Space.o SpaceViewer.o
+	$(CXX) main.o Space.o SpaceViewer.o -o $(EXECUTABLE) $(LIBS)
 
 %.o: %.cpp
 	$(CXX) -c $< -o $@
