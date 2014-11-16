@@ -48,6 +48,7 @@ int main()
 
     delete pixels;
     delete space;
+    delete spaceViewer;
 
     return 0;
 }
